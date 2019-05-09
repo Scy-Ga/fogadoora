@@ -22,11 +22,11 @@ export default class Telek {
     const m: string[] = sor.split(" ");
     if (m.length !== 3) throw new Error("Hibás forrás!");
     if (m[0] === "0") {
-       this.hazszam = Telek.aktParosHazszam;
-       Telek.aktParosHazszam += 2;
+      this.hazszam = Telek.aktParosHazszam;
+      Telek.aktParosHazszam += 2;
     } else {
-       this.hazszam = Telek.aktParatlanHazszam;
-       Telek.aktParatlanHazszam += 2;
+      this.hazszam = Telek.aktParatlanHazszam;
+      Telek.aktParatlanHazszam += 2;
     }
 
     this.szelesseg = parseInt(m[1], 10);

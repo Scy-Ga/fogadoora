@@ -2,14 +2,14 @@
   <div id="app">
     <p>
       Linkek:
-      <a href="kerites.txt" download>kerites.txt</a>
+      <a href="fogado.txt" download>fogado.txt</a>
       <a href="Kerítés_fel.pdf" target="_blank">Feladat</a>
       <a href="Kerítés_jav.pdf" target="_blank">Javítási</a>
-      <a href="https://github.com/nitslaszlo/ErettsegiKeritesTsVueJs" target="_blank">Forrás</a>
-      <a href="https://github.com/nitslaszlo/JedlikVueJsStarter" target="_blank">SDK</a>
+      <a href="https://github.com/Scy-Ga/fogadoora" target="_blank">Forrás</a>
+      <a href="https://github.com/Scy-Ga/fogadoora" target="_blank">SDK</a>
     </p>
     <txt-reader
-      title="Kérem töltse fel a forrás (kerites.txt) állományt!"
+      title="Kérem töltse fel a forrás (fogado.txt) állományt!"
       @load="txtSorai = $event"
     />
     <div v-if="mutat" id="megoldas">
@@ -35,9 +35,9 @@
         <br>Adjon meg egy házszámot!
         <input v-model="hazszamInputStr" type="number" min="1" max="117">
         <br>
-        A kerírés színe / állapota: {{ keritesSzineAllapota }}
+        A kerírés színe / állapota: {{ 0 }}
         <br>
-        Egy lehetséges festési szín: {{ lehetsegesFestesiSzin }}
+        Egy lehetséges festési szín: {{ 0 }}
       </p>
     </div>
     <p v-if="mutat"><txt-writer title="utcakep.txt állomány mentése" :content="utcakep" filename="utcakep.txt"/></p>
@@ -45,8 +45,8 @@
 
     <!-- Nem a feladat része : -->
     <div id="egyebek" v-if="mutat">
-      <p><pre><b>utcakep.txt fájl:</b><br>{{ utcakep }}</pre></p>
-      <p><pre><b>kerites.txt fájl:</b><br>{{ txtSorai }}</pre></p>
+      <p><pre><b>fogado.txt fájl:</b><br>{{ 0 }}</pre></p>
+      <p><pre><b>ido.txt fájl:</b><br>{{ 0 }}</pre></p>
     </div>
   </div>
 </template>
